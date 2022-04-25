@@ -36,7 +36,7 @@ class ValidaCPF {
     valida() {
         if (!this.cpfLimpo) return false;
         if (typeof this.cpfLimpo !== 'string') return false;
-        if (this.cpfLimpo.length !== 11) return false;
+        if (this.cpfLimpo.length < 11 && this.cpfLimpo.length > 11) return false;
         if (this.eSequencia()) return false;
         this.geraNovoCpf();
         console.log(this.novoCPF);
@@ -44,7 +44,7 @@ class ValidaCPF {
     }
 }
 
-let validacpf = new ValidaCPF('070-987-720-03');
+let validacpf = new ValidaCPF('177.023.730-59');
 // let validacpf = new ValidaCPF('999.999.999-99');
 if (validacpf.valida()) {
     console.log('CPF valido');
