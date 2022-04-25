@@ -30,7 +30,7 @@ class ValidaCPF {
         }
 
         const digito = 11 - (total % 11);
-        return digito <= 9 ? digito : 0;
+        return digito <= 9 ? digito : String('0');
     }
 
     valida() {
